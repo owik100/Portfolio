@@ -1,3 +1,36 @@
-body { 
-    padding-top: 50px; 
+html, body{
+    height:100%;
+    width:100%;
 }
+body { 
+    height:100%;
+    width:100%;
+
+}
+
+button:focus {
+    outline: none;
+  }
+
+#home
+{
+    background-image: url("https://i.redd.it/24y4a814zy801.jpg");
+    height: 100%;
+}
+
+#home h1{
+position: relative;
+top: 50%;
+font-family: 'Roboto Slab', serif;
+color: antiquewhite;
+}
+
+
+
+.navbar{
+    transition:500ms ease;
+    background:transparent;
+  }
+  .navbar.scrolled{
+    background:#000;
+  }
