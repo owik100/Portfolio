@@ -1,8 +1,9 @@
 $(document).ready(function(){
-  
+
+
     $(window).scroll(function(){
 
-        var homeSize = $( window ).height();
+        var homeSize = $( "#home" ).height();
         var navbarSize =  $(".navbar").height();
 
         $('nav').toggleClass('scrolled', $(this).scrollTop() > homeSize -navbarSize);
