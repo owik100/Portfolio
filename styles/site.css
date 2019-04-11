@@ -6,6 +6,7 @@ body {
     height:100%;
     width:100%;
 
+
 }
 
 button:focus {
@@ -16,7 +17,7 @@ button:focus {
 {
     background-image: url("https://i.redd.it/24y4a814zy801.jpg");
     height: 100%;
-    min-height: 500px;
+    /* min-height: 500px; */
 }
 
 #home h1{
@@ -41,10 +42,27 @@ color: antiquewhite;
 
     list-style-type: none;
     position: absolute;
-    bottom: 0%;
+    bottom: 5%;
   }
   .social li {
     display: inline-block;
+    font-size:calc(30px + .5vw);
+    margin-right:30px;
+ }
+
+ #socialArrow
+ {
+  list-style-type: none;
+  position: absolute;
+  bottom: 0%;
+  font-size:calc(30px + .5vw);
+ }
+
+ .opis{
+  position: absolute;
+  color: antiquewhite;
+  font-family: 'Roboto Slab', serif;
+  bottom: 10%;
  }
 
 
@@ -65,3 +83,13 @@ color: antiquewhite;
   a:active {
 
   }
+
+
+  @media (max-width: 300px) {
+
+    .icon {
+     font-size: 12px;
+    }
+ }
+
+ 
