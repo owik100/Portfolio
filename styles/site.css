@@ -6,16 +6,16 @@ body {
     height:100%;
     width:100%;
 
-
+    font-family: 'Roboto Slab', serif;
 }
 
-button:focus {
-    outline: none;
-  }
+a {
+  outline:none !important;
+}
 
 #home
 {
-    background-image: url("https://i.redd.it/24y4a814zy801.jpg");
+    background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
     height: 100%;
     /* min-height: 500px; */
 }
@@ -65,31 +65,44 @@ color: antiquewhite;
   bottom: 10%;
  }
 
+ .active {
+  /* background:rgb(250, 212, 0);
+  border-radius: 25%; */
+  color: antiquewhite !important;
+}
 
-  a:link {
+
+.socialColor a:link {
 
     color: white;
   }
   
-  a:visited {
+.socialColor a:visited {
 
     color: white;
   }
   
-  a:hover {
-
-  }
-  
-  a:active {
-
+  .socialColor a:hover {
+    color: rgb(0, 183, 255);
+    transition: 0.5s;
+    
   }
 
+#about{
+  background-color: rgb(70, 84, 90);
 
-  @media (max-width: 300px) {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+ 
+
+
+  /* @media (max-width: 300px) {
 
     .icon {
      font-size: 12px;
     }
  }
 
- 
+  */
