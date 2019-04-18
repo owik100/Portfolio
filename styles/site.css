@@ -8,11 +8,28 @@ body {
 
     font-family: 'Roboto Slab', serif;
 }
-
 a {
   outline:none !important;
 }
 
+/*Navbar section */
+.navbar{
+  transition:500ms ease;
+  background:transparent;
+}
+.navbar.scrolled{
+  background:#000;
+}
+.active {
+  /* background:rgb(250, 212, 0);
+  border-radius: 25%; */
+  color: antiquewhite !important;
+}
+
+
+
+
+/*Home section */
 #home
 {
     background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
@@ -27,67 +44,55 @@ font-family: 'Roboto Slab', serif;
 color: antiquewhite;
 }
 
-
-
-.navbar{
-    transition:500ms ease;
-    background:transparent;
-  }
-  .navbar.scrolled{
-    background:#000;
-  }
-
-  .social
-  {
-
-    list-style-type: none;
-    position: absolute;
-    bottom: 5%;
-  }
-  .social li {
-    display: inline-block;
-    font-size:calc(30px + .5vw);
-    margin-right:30px;
- }
-
- #socialArrow
- {
-  list-style-type: none;
-  position: absolute;
-  bottom: 0%;
-  font-size:calc(30px + .5vw);
- }
-
- .opis{
+.opis{
   position: absolute;
   color: antiquewhite;
   font-family: 'Roboto Slab', serif;
   bottom: 10%;
  }
 
- .active {
-  /* background:rgb(250, 212, 0);
-  border-radius: 25%; */
-  color: antiquewhite !important;
+
+ 
+/*Icons */
+.social
+{
+
+  list-style-type: none;
+  position: absolute;
+  bottom: 5%;
+}
+.social li {
+  display: inline-block;
+  font-size:calc(30px + .5vw);
+  margin-right:30px;
 }
 
+#socialArrow
+{
+list-style-type: none;
+position: absolute;
+bottom: 0%;
+font-size:calc(30px + .5vw);
+}
 
 .socialColor a:link {
 
-    color: white;
-  }
-  
+  color: white;
+}
+
 .socialColor a:visited {
 
-    color: white;
-  }
-  
-  .socialColor a:hover {
-    color: rgb(0, 183, 255);
-    transition: 0.5s;
-    
-  }
+  color: white;
+}
 
+.socialColor a:hover {
+  color: rgb(0, 183, 255);
+  transition: 0.5s;
+  
+}
+
+
+/*About section */
 #about{
   background-color: rgb(70, 84, 90);
 
@@ -95,7 +100,21 @@ color: antiquewhite;
   padding-bottom: 50px;
 }
 
+
+/*Skills section */
+#skills{
+  background-color: rgb(91, 158, 187);
+
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
  
+.img-logo{
+  width: 100px;
+}
+.img-logo2{
+  width: 150px;
+}
 
 
   /* @media (max-width: 300px) {
