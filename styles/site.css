@@ -110,10 +110,8 @@ font-size:calc(30px + .5vw);
 }
  
 .img-logo{
-  width: 100px;
-}
-.img-logo2{
-  width: 150px;
+  max-width:100px;
+  align-self: center;
 }
 
 /*Footer section */
