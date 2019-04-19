@@ -103,7 +103,7 @@ font-size:calc(30px + .5vw);
 
 /*Skills section */
 #skills{
-  background-color: rgb(91, 158, 187);
+  background-color: rgb(106, 172, 31);
 
   padding-top: 60px;
   padding-bottom: 50px;
@@ -116,6 +116,16 @@ font-size:calc(30px + .5vw);
   width: 150px;
 }
 
+/*Footer section */
+footer{
+  background-color: black;
+  color: antiquewhite;
+}
+
+#upArrow{
+  font-size:calc(30px + .5vw);
+
+}
 
   /* @media (max-width: 300px) {
 
@@ -125,3 +135,5 @@ font-size:calc(30px + .5vw);
  }
 
   */
+
+  
