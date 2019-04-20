@@ -86,7 +86,7 @@ font-size:calc(30px + .5vw);
 }
 
 .socialColor a:hover {
-  color: rgb(0, 183, 255);
+  color: antiquewhite;
   transition: 0.5s;
   
 }
@@ -118,11 +118,17 @@ font-size:calc(30px + .5vw);
 footer{
   background-color: black;
   color: antiquewhite;
+
+}
+
+.mailFooter
+{
+  font-size:calc(20px + .5vw);
+  vertical-align: middle;
 }
 
 #upArrow{
   font-size:calc(30px + .5vw);
-
 }
 
   /* @media (max-width: 300px) {
@@ -133,5 +139,3 @@ footer{
  }
 
   */
-
-  
