@@ -12,6 +12,11 @@ a {
   outline:none !important;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
 /*Navbar section */
 .navbar{
   transition:500ms ease;
@@ -114,11 +119,22 @@ font-size:calc(30px + .5vw);
   align-self: center;
 }
 
+
+/*Projects section */
+#projects{
+background-color: rgb(29, 156, 135);
+min-height: 500px;
+
+padding-top: 60px;
+padding-bottom: 50px;
+}
+
+
+
 /*Footer section */
 footer{
   background-color: black;
   color: antiquewhite;
-
 }
 
 .mailFooter
