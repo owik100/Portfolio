@@ -17,6 +17,10 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 
+.interactive{
+  cursor: pointer;
+}
+
 /*Navbar section */
 .navbar{
   transition:500ms ease;
