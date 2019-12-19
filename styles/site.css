@@ -21,6 +21,11 @@ a:hover, a:visited, a:link, a:active
   cursor: pointer;
 }
 
+.jumbotron_project{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /*Navbar section */
 .navbar{
   transition:500ms ease;
