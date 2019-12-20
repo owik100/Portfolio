@@ -31,11 +31,13 @@ $(document).ready(function(){
     });
 
     $(function() {
-      $('.img_project').hover(function() {
-        $('.lupa').addClass('lupa_show');
+      $('.projectGifAndMagnifer').hover(function() {
+        $('.magnifier').addClass('magnifierShow');
+        $('.projectGif').addClass('projectGifOpacity');
       }, function() {
         // on mouseout, reset the background colour
-        $('.lupa').removeClass('lupa_show');
+        $('.magnifier').removeClass('magnifierShow');
+        $('.projectGif').removeClass('projectGifOpacity');
       });
     });
 

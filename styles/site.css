@@ -139,18 +139,18 @@ padding-top: 60px;
 padding-bottom: 50px;
 }
 
-.img_project:hover
+.projectGifOpacity
 {
 opacity: 0.3;
 transition: 0.5s;
 }
 
-.img_project{
+.projectGif{
   transition: 0.5s;
   
 }
 
-.lupa{
+.magnifier{
   position: absolute;
     left: 50%;
     top: 50%;
@@ -161,10 +161,23 @@ transition: 0.5s;
     transition: 0.5s;
 }
 
-.lupa_show{
+.magnifierShow{
   opacity: 1;
   transition: 0.5s;
 }
+
+.projectContainer{
+  background-color: azure;
+}
+
+.projectGifAndMagnifer{
+position: relative;
+}
+
+.projectGifAndMagnifer:hover{
+  cursor: pointer;
+}
+
 
 /*Footer section */
 footer{
