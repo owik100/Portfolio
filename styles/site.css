@@ -24,6 +24,7 @@ a:hover, a:visited, a:link, a:active
 .jumbotron_project{
   padding-top: 5px;
   padding-bottom: 5px;
+ 
 }
 
 /*Navbar section */
@@ -138,7 +139,32 @@ padding-top: 60px;
 padding-bottom: 50px;
 }
 
+.img_project:hover
+{
+opacity: 0.3;
+transition: 0.5s;
+}
 
+.img_project{
+  transition: 0.5s;
+  
+}
+
+.lupa{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top:-25px;
+    margin-left:-25px;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.lupa_show{
+  opacity: 1;
+  transition: 0.5s;
+}
 
 /*Footer section */
 footer{

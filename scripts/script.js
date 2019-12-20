@@ -29,4 +29,16 @@ $(document).ready(function(){
         });
       } 
     });
+
+    $(function() {
+      $('.img_project').hover(function() {
+        $('.lupa').addClass('lupa_show');
+      }, function() {
+        // on mouseout, reset the background colour
+        $('.lupa').removeClass('lupa_show');
+      });
+    });
+
+
+
   });
