@@ -178,6 +178,19 @@ position: relative;
   cursor: pointer;
 }
 
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: .5rem;
+}
+
+.card-deck img{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width:360px;
+  max-height:300px;
+}
 
 /*Footer section */
 footer{
