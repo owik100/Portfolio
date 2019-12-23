@@ -185,11 +185,7 @@ position: relative;
 }
 
 .card-deck img{
-  display: block;
-  width: auto;
-  height: auto;
-  max-width:360px;
-  max-height:300px;
+
 }
 
 /*Footer section */
