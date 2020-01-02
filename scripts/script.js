@@ -31,13 +31,18 @@ $(document).ready(function(){
     });
 
     $(function() {
+      let projectid;
       $('.projectGifAndMagnifer').hover(function() {
-        $('.magnifier').addClass('magnifierShow');
-        $('.projectGif').addClass('projectGifOpacity');
+        
+        projectid = this.id;
+
+        $('#' + projectid + ' .magnifier').addClass('magnifierShow');
+        $('#' + projectid + ' .projectGif').addClass('projectGifOpacity');
       }, function() {
+
         // on mouseout, reset the background colour
-        $('.magnifier').removeClass('magnifierShow');
-        $('.projectGif').removeClass('projectGifOpacity');
+        $('#' + projectid + ' .magnifier').removeClass('magnifierShow');
+        $('#' + projectid + ' .projectGif').removeClass('projectGifOpacity');
       });
     });
 
