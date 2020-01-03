@@ -31,9 +31,8 @@ $(document).ready(function(){
     });
 
     $(function() {
-      let projectid;
-      $('.projectGifAndMagnifer').hover(function() {
-        
+      let projectid = "";
+      $('.projectGifAndMagnifer').hover(function() {       
         projectid = this.id;
 
         $('#' + projectid + ' .magnifier').addClass('magnifierShow');

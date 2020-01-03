@@ -139,6 +139,18 @@ padding-top: 60px;
 padding-bottom: 50px;
 }
 
+.projectContainer{
+  background-color: azure;
+}
+
+.projectGifAndMagnifer{
+  position: relative;
+  }
+  
+  .projectGifAndMagnifer:hover{
+    cursor: pointer;
+  }
+
 .projectGifOpacity
 {
 opacity: 0.3;
@@ -166,17 +178,9 @@ transition: 0.5s;
   transition: 0.5s;
 }
 
-.projectContainer{
-  background-color: azure;
-}
 
-.projectGifAndMagnifer{
-position: relative;
-}
 
-.projectGifAndMagnifer:hover{
-  cursor: pointer;
-}
+
 
 .card-deck {
     display: grid;
