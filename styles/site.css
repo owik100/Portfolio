@@ -178,16 +178,24 @@ transition: 0.5s;
   transition: 0.5s;
 }
 
-
-
-
-
 .card-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: .5rem;
 }
 
+
+
+
+/*Modal section*/
+.bImg{
+  max-width: 774px;
+  max-height: 500px;
+}
+
+.sImg{
+  cursor: pointer;
+}
 /*Footer section */
 footer{
   background-color: black;

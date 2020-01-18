@@ -45,6 +45,14 @@ $(document).ready(function(){
       });
     });
 
-
+    $(".sImg").on('click', function(event) {
+      let imgsrc = ($(this).attr('src'));
+      let id = ($(this).attr('smallID'));
+      id = id.slice(id.length - 1);
+      let bigScreen = 'main' + id;
+      let bigphoto =  $("#" + bigScreen);
+      bigphoto.attr("src",imgsrc);
+ 
+    });
 
   });
