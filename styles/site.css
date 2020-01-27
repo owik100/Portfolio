@@ -6,7 +6,7 @@ body {
     height:100%;
     width:100%;
 
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 a {
   outline:none !important;
@@ -27,6 +27,11 @@ a:hover, a:visited, a:link, a:active
  
 }
 
+.topic{
+  color: #d87a61;
+  font-family: 'Roboto Slab', serif;
+}
+
 /*Navbar section */
 .navbar{
   transition:500ms ease;
@@ -36,20 +41,14 @@ a:hover, a:visited, a:link, a:active
   background:#000;
 }
 .active {
-  /* background:rgb(250, 212, 0);
-  border-radius: 25%; */
   color: antiquewhite !important;
 }
-
-
-
 
 /*Home section */
 #home
 {
     background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
     height: 100%;
-    /* min-height: 500px; */
 }
 
 #home h1{
@@ -59,19 +58,16 @@ font-family: 'Roboto Slab', serif;
 color: antiquewhite;
 }
 
-.opis{
+.description{
   position: absolute;
   color: antiquewhite;
   font-family: 'Roboto Slab', serif;
   bottom: 10%;
  }
 
-
- 
 /*Icons */
 .social
 {
-
   list-style-type: none;
   position: absolute;
   bottom: 5%;
@@ -106,7 +102,6 @@ font-size:calc(30px + .5vw);
   
 }
 
-
 /*About section */
 #about{
   background-color: rgb(70, 84, 90);
@@ -114,7 +109,6 @@ font-size:calc(30px + .5vw);
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 
 /*Skills section */
 #skills{
@@ -132,7 +126,7 @@ font-size:calc(30px + .5vw);
 
 /*Projects section */
 #projects{
-background-color: rgb(29, 156, 135);
+/* background-color: rgb(29, 156, 135); */
 min-height: 500px;
 
 padding-top: 60px;
@@ -140,7 +134,7 @@ padding-bottom: 50px;
 }
 
 .projectContainer{
-  background-color: azure;
+  background-color: antiquewhite;
 }
 
 .projectGifAndMagnifer{
@@ -184,9 +178,6 @@ transition: 0.5s;
     grid-gap: .5rem;
 }
 
-
-
-
 /*Modal section*/
 .bImg{
   max-width: 774px;
@@ -211,12 +202,3 @@ footer{
 #upArrow{
   font-size:calc(30px + .5vw);
 }
-
-  /* @media (max-width: 300px) {
-
-    .icon {
-     font-size: 12px;
-    }
- }
-
-  */

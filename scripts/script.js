@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+    //Home section size
     $(window).scroll(function(){
 
         var homeSize = $( "#home" ).height();
@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('nav').toggleClass('scrolled', $(this).scrollTop() > homeSize -navbarSize);
     });
 
-    
+    //Scrolling
     $("#mainNav a, #socialArrow a, #upArrow a").on('click', function(event) {
       // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
@@ -30,6 +30,7 @@ $(document).ready(function(){
       } 
     });
 
+    //ProjectsAndMagnifer
     $(function() {
       let projectid = "";
       $('.projectGifAndMagnifer').hover(function() {       
@@ -45,6 +46,7 @@ $(document).ready(function(){
       });
     });
 
+    //Modal image gallery
     $(".sImg").on('click', function(event) {
       let imgsrc = ($(this).attr('src'));
       let id = ($(this).attr('smallID'));
