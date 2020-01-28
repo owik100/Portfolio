@@ -182,12 +182,15 @@ transition: 0.5s;
 
 /*Modal section*/
 .bImg{
-  max-width: 774px;
+  
   max-height: 500px;
 }
 
 .sImg{
   cursor: pointer;
+  width: auto;
+  max-height: 100%;
+  display: block;
 }
 /*Footer section */
 footer{
