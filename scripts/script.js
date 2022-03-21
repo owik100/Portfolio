@@ -50,7 +50,15 @@ $(document).ready(function(){
     $(".sImg").on('click', function(event) {
       let imgsrc = ($(this).attr('src'));
       let id = ($(this).attr('smallID'));
-      id = id.slice(id.length - 1);
+      let sliceNumber = 0;
+      if(id.length == 6){
+        sliceNumber = 1;
+      }
+      else if(id.length == 7){
+        sliceNumber = 2;
+      }
+
+      id = id.slice(id.length - sliceNumber);
       let bigScreen = 'main' + id;
       let bigphoto =  $("#" + bigScreen);
       bigphoto.attr("src",imgsrc);
