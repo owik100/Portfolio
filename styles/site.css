@@ -122,8 +122,28 @@ font-size:calc(30px + .5vw);
 }
  
 .img-logo{
-  max-width:100px;
+  max-width:90px;
   align-self: center;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  transition: transform .2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-logo {
+    max-width:60px;
+    margin-right: 6px;
+  }
+}
+
+.img-logo:hover {
+  transform: scale(1.2);
+}
+
+.containerFlex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
