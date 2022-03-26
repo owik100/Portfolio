@@ -146,6 +146,9 @@ font-size:calc(30px + .5vw);
   justify-content: center;
 }
 
+.containerSkills {
+    max-width: 1160px;
+}
 
 /*Projects section */
 #projects{
