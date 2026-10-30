@@ -76,7 +76,7 @@ const initPortfolio = () => {
   });
 
   // Modal image gallery with previous/next arrows
-  const arrowIcon = (direction) => (direction === 'prev' ? 'fa-chevron-left' : 'fa-chevron-right');
+  const arrowIcon = (direction) => (direction === 'prev' ? 'icon-chevron-left' : 'icon-chevron-right');
 
   document.querySelectorAll('.modal').forEach((modal) => {
     const mainImage = modal.querySelector('.bImg');
@@ -102,7 +102,7 @@ const initPortfolio = () => {
       button.type = 'button';
       button.className = `projectPreviewArrow ${direction}`;
       button.setAttribute('aria-label', label);
-      button.innerHTML = `<i class="fas ${arrowIcon(direction)}" aria-hidden="true"></i>`;
+      button.innerHTML = `<svg class="icon" aria-hidden="true" focusable="false"><use href="#${arrowIcon(direction)}"></use></svg>`;
       return button;
     };
 
