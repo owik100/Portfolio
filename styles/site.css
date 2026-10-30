@@ -1,3 +1,10 @@
+:root{
+  --accent: #955726;
+  --accent-soft: #e6c08a;
+  --link: #1d4ed8;
+  --link-hover: #1e40af;
+}
+
 html, body{
     height:100%;
     width:100%;
@@ -17,6 +24,35 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 
+a{
+  color: var(--link);
+}
+
+a:hover{
+  color: var(--link-hover);
+}
+
+.skip-link{
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  background: #000;
+  border-radius: 0.25rem;
+}
+
+.skip-link:link,
+.skip-link:visited,
+.skip-link:hover,
+.skip-link:focus{
+  color: #fff;
+}
+
+.skip-link:focus{
+  top: 1rem;
+}
+
 .interactive{
   cursor: pointer;
 }
@@ -28,7 +64,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 .topic{
-  color: #d87a61;
+  color: var(--accent);
   font-family: 'Roboto Slab', serif;
 }
 
@@ -49,17 +85,47 @@ a:hover, a:visited, a:link, a:active
   color: antiquewhite !important;
 }
 
-/*Home section */
+.navbar-dark .navbar-nav .nav-link{
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus{
+  color: antiquewhite;
+}
+
+.navbar-dark .navbar-toggler{
+  color: #fff;
+}
+
+/* Hero background: "Sunlight over clouds in mountains" by Hugo Sykes, Pexels
+   https://www.pexels.com/photo/sunlight-over-clouds-in-mountains-15434615/
+   License: https://www.pexels.com/license/ (free to use, attribution not required) */
 #home
 {
-    background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 45%,
+        rgba(0, 0, 0, 0.6) 100%
+    ), url("../images/hero-mountains.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 45%,
+        rgba(0, 0, 0, 0.6) 100%
+    ), image-set(
+        url("../images/hero-mountains.webp") type("image/webp"),
+        url("../images/hero-mountains.jpg") type("image/jpeg")
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #1b1b2f;
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 100vh;
 }
 
 #home h1{
@@ -67,6 +133,7 @@ position: relative;
 top: 40%;
 font-family: 'Roboto Slab', serif;
 color: antiquewhite;
+text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .description{
@@ -184,6 +251,13 @@ padding-bottom: 50px;
   cursor: pointer;
 }
 
+.card-title .projectTitle,
+.card-title .projectTitle:hover,
+.card-title .projectTitle:focus{
+  color: inherit;
+  text-decoration: none;
+}
+
 .projectGifOpacity
 {
 opacity: 0.3;
@@ -193,6 +267,11 @@ transition: 0.5s;
 .projectGif{
   position: relative;
   transition: 0.5s;
+}
+
+.projectGif picture{
+  display: block;
+  width: 100%;
 }
 
 .magnifier{
@@ -222,11 +301,137 @@ transition: 0.5s;
   max-height: 500px;
 }
 
+.projectPreview{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f4e8d8;
+  transition: background-color 0.3s ease;
+}
+
+.projectPreview::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(100deg, #e4d0b4 20%, #fbf3e6 40%, #e4d0b4 60%);
+  background-size: 200% 100%;
+  animation: projectPreviewShimmer 1.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.projectPreview.is-loaded::before{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectPreview.is-loaded{
+  background-color: transparent;
+}
+
+.projectPreview .bImg{
+  display: block;
+  position: relative;
+  z-index: 1;
+  max-height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectPreview.is-loaded .bImg{
+  opacity: 1;
+}
+
+@keyframes projectPreviewShimmer{
+  0%{
+    background-position: 200% 0;
+  }
+  100%{
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectPreview::before{
+    animation: none;
+  }
+}
+
+.projectPreviewArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+}
+
+.projectPreviewArrow:hover{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.projectPreviewArrow:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.projectPreviewArrow.prev{
+  left: 8px;
+}
+
+.projectPreviewArrow.next{
+  right: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+  .projectPreview{
+    height: min(500px, 55vh);
+  }
+
+  .projectPreviewArrow{
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .projectPreviewArrow.prev{
+    left: 4px;
+  }
+
+  .projectPreviewArrow.next{
+    right: 4px;
+  }
+}
+
 .sImg{
   cursor: pointer;
   width: auto;
   max-height: 100%;
   display: block;
+}
+
+.modal-footer .row > .col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .techBadges{
@@ -235,7 +440,7 @@ transition: 0.5s;
 }
 
 .badgeMine{
-  background-color: #eb9e78;
+  background-color: var(--accent-soft);
 }
 
 .netlifyIcon{
@@ -243,6 +448,14 @@ transition: 0.5s;
   height: 1.15em;
   vertical-align: -0.15em;
   margin-left: 2px;
+}
+
+/* Keep the original Bootstrap 4 container width on very wide screens */
+@media (min-width: 1400px) {
+  #about .container,
+  #projects .container {
+    max-width: 1140px;
+  }
 }
 
 /*Footer section */
