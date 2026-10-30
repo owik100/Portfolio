@@ -53,6 +53,12 @@ a:hover, a:visited, a:link, a:active
 #home
 {
     background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1b1b2f;
+    position: relative;
+    overflow: hidden;
     height: 100%;
 }
 
@@ -76,6 +82,7 @@ color: antiquewhite;
   list-style-type: none;
   position: absolute;
   bottom: 5%;
+  transition: opacity 0.3s;
 }
 .social li {
   display: inline-block;
@@ -89,6 +96,12 @@ list-style-type: none;
 position: absolute;
 bottom: 0%;
 font-size:calc(30px + .5vw);
+transition: opacity 0.3s;
+}
+
+.heroIconsHidden{
+  opacity: 0;
+  pointer-events: none;
 }
 
 .socialColor a:link {
@@ -165,10 +178,11 @@ padding-bottom: 50px;
 .projectGifAndMagnifer{
   position: relative;
   }
-  
-  .projectGifAndMagnifer:hover{
-    cursor: pointer;
-  }
+
+.projectGif,
+.projectTitle{
+  cursor: pointer;
+}
 
 .projectGifOpacity
 {
@@ -177,16 +191,15 @@ transition: 0.5s;
 }
 
 .projectGif{
+  position: relative;
   transition: 0.5s;
-  
 }
 
 .magnifier{
   position: absolute;
     left: 50%;
     top: 50%;
-    margin-top:-25px;
-    margin-left:-25px;
+    transform: translate(-50%, -50%);
 
     opacity: 0;
     transition: 0.5s;
@@ -223,6 +236,13 @@ transition: 0.5s;
 
 .badgeMine{
   background-color: #eb9e78;
+}
+
+.netlifyIcon{
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.15em;
+  margin-left: 2px;
 }
 
 /*Footer section */

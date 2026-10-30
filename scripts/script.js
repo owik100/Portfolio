@@ -7,6 +7,7 @@ $(document).ready(function(){
         var navbarSize =  $(".navbar").height();
 
         $('nav').toggleClass('scrolled', $(this).scrollTop() > homeSize -navbarSize);
+        $('.social, #socialArrow').toggleClass('heroIconsHidden', $(this).scrollTop() > 50);
     });
 
     //Scrolling
@@ -32,17 +33,17 @@ $(document).ready(function(){
 
     //ProjectsAndMagnifer
     $(function() {
-      let projectid = "";
-      $('.projectGifAndMagnifer').hover(function() {       
-        projectid = this.id;
+      $('.projectGif, .projectTitle').hover(function() {
+        const $card = $(this).closest('.projectGifAndMagnifer');
 
-        $('#' + projectid + ' .magnifier').addClass('magnifierShow');
-        $('#' + projectid + ' .projectGif').addClass('projectGifOpacity');
+        $card.find('.magnifier').addClass('magnifierShow');
+        $card.find('.projectGif .card-img-top').addClass('projectGifOpacity');
       }, function() {
+        const $card = $(this).closest('.projectGifAndMagnifer');
 
         // on mouseout, reset the background colour
-        $('#' + projectid + ' .magnifier').removeClass('magnifierShow');
-        $('#' + projectid + ' .projectGif').removeClass('projectGifOpacity');
+        $card.find('.magnifier').removeClass('magnifierShow');
+        $card.find('.projectGif .card-img-top').removeClass('projectGifOpacity');
       });
     });
 
